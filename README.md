@@ -19,13 +19,12 @@ Implementação educacional das estruturas de dados avançadas descritas nos Cap
 ├── fibonacci/
 │   ├── fibonacci_heap.py       # Implementação do Heap de Fibonacci
 │   ├── dijkstra_com_fibonacci.py
+│   ├── run_benchmarks.py        # Benchmark Dijkstra
 │   └── dijkstra_baseline_heapq.py
+│
 ├── arvore_vEB/
 │   ├── vEB_tree.py              # Implementação da Árvore vEB
 │   └── run_benchmark.py         # Benchmark Fila de Prioridade em Universo Limitado 
-└── benchmarks/
-    ├── run_benchmarks.py        # Benchmark Dijkstra
-    └── benchmark_resultados.csv
 ```
 
 ## Requisitos
@@ -39,7 +38,7 @@ Python 3.8+
 
 ### Dijkstra (Fibonacci vs Binary Heap)
 ```bash
-cd benchmarks
+cd fibonacci
 python3 run_benchmarks.py
 ```
 
