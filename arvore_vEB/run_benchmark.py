@@ -14,7 +14,8 @@ from vEB_tree import vEB
 sys.setrecursionlimit(40000)
 
 def benchmark_veb(universe_size, elements):
-   
+    
+    
     # 1. Warm-up run (descartada)
     gc.collect() # Limpa a memória
     tree_warmup = vEB(universe_size)
@@ -86,12 +87,12 @@ def benchmark_heapq(elements):
 
 
 # Universo Fixo (conforme texto do relatório, 2^24)
-U = 2**32 
+U = 2**24
 print(f"Universo (U) fixado em: {U}")
 
 # Valores de N (número de elementos) para testar
 # (Potências de 2, de 2^10 até 2^18)
-N_values = [2**k for k in range(10, 31)] 
+N_values = [2**k for k in range(10, 19)] 
 
 
 # Listas para guardar os resultados
@@ -138,7 +139,7 @@ plt.xscale('log', base=2)
 plt.yscale('log', base=10) 
 
 
-plt.xticks(N_values, [f'$2^{{{k}}}$' for k in range(10, 31)]) 
+plt.xticks(N_values, [f'$2^{{{k}}}$' for k in range(10, 19)]) 
 
 
 output_filename = 'images/plot_veb_vs_heap_v1.png' 
